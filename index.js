@@ -46,9 +46,9 @@ inquirer.prompt(userInput.questions).then((answers) => {
 
 // Creates the svg file
 function writeFile(shape) {
-    console.log(shape)
+    // console.log(shape)
     fs.writeFile(`./examples/${shape.name}.svg`,
         `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">\n${shape.renderContent}\n${shape.renderText}\n</svg>`,
-        (err) => err ? console.log(err) : console.log('Success!')
+        (err) => err ? console.log(err) : console.log(`Successfully created ${shape.name}.svg!j`)
     );
 }
